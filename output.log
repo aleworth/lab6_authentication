@@ -1,0 +1,36 @@
+nohup: ignoring input
+before / Route
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2018-01-04T07:52:34.065Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true },
+  msg: 'User Updated.',
+  user: '5a25c38a8480f40749a0ca08',
+  username: 'aleworth',
+  color: 'Blue' }
+/ Route if user
+[0mGET / [36m304 [0m14.543 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m2.799 ms - -[0m
+[0mGET /javascripts/my_app.js [36m304 [0m1.831 ms - -[0m
+[0mGET /user/profile [36m304 [0m13.909 ms - -[0m
+[0mGET /favicon.ico [31m500 [0m2.980 ms - 1884[0m
+Error: Failed to lookup view "error" in views directory "/opt/bitnami/apache2/htdocs/auth/views"
+    at EventEmitter.render (/opt/bitnami/apache2/htdocs/auth/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/opt/bitnami/apache2/htdocs/auth/node_modules/express/lib/response.js:961:7)
+    at /opt/bitnami/apache2/htdocs/auth/app.js:70:9
+    at Layer.handle_error (/opt/bitnami/apache2/htdocs/auth/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/opt/bitnami/apache2/htdocs/auth/node_modules/express/lib/router/index.js:310:13)
+    at /opt/bitnami/apache2/htdocs/auth/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/opt/bitnami/apache2/htdocs/auth/node_modules/express/lib/router/index.js:330:12)
+    at IncomingMessage.next (/opt/bitnami/apache2/htdocs/auth/node_modules/express/lib/router/index.js:271:10)
+    at done (/opt/bitnami/apache2/htdocs/auth/node_modules/express/lib/response.js:956:25)
+    at EventEmitter.render (/opt/bitnami/apache2/htdocs/auth/node_modules/express/lib/application.js:581:14)
+    at ServerResponse.render (/opt/bitnami/apache2/htdocs/auth/node_modules/express/lib/response.js:961:7)
+    at /opt/bitnami/apache2/htdocs/auth/app.js:59:13
+    at Layer.handle_error (/opt/bitnami/apache2/htdocs/auth/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/opt/bitnami/apache2/htdocs/auth/node_modules/express/lib/router/index.js:310:13)
+    at /opt/bitnami/apache2/htdocs/auth/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/opt/bitnami/apache2/htdocs/auth/node_modules/express/lib/router/index.js:330:12)
