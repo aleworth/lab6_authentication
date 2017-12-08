@@ -3,29 +3,50 @@
     
 <head>
     <title>User Login and Sessions</title>
+    
+    <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAzheirDJDuy9OiOYK3LPjJA7Hn26lRI1E",
+    authDomain: "creative6-89f30.firebaseapp.com",
+    databaseURL: "https://creative6-89f30.firebaseio.com",
+    projectId: "creative6-89f30",
+    storageBucket: "",
+    messagingSenderId: "792855247280"
+  };
+  firebase.initializeApp(config);
+</script>
+    
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
 </head>
         
 <body>  
     <div ng-controller="myController">
-        <h2 id="welcomeText" style="color:#ffff00;">Welcome. You are Logged In as
-            <%= username %>
+        <h2 id="welcomeText" style="color:#ffff00;">Welcome to your Meme Library
         </h2>
-        <a id="logoutLink" href="/logout">Logout</a>
-        <a id="editLink" href="/user">Edit User</a>
+        <a id="logoutLink" href="/logout">Logout</a> <br>
+        <a id="editLink" href="/user">Edit User</a><br>
         <p style="color:white;">User Profile:<p>
     </div>
-    <hr>
-    <span id="indexMsg" style="color:white;">
-        <%= msg %>
-    </span>
-    <hr>
-    <span id="colorText" style="color:white;">
-    Color
-        <%= color %>
-      </span>
-    <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+    <div ng-controller="memeController">
+        <form>
+            Name: <input type="text" ng-model="meme.name">
+            Image URL: <input type="text" ng-model="meme.picture">
+            <input type="submit" ng-click="upload(meme)" value="Upload Meme">
+        </form>
+        <br>
+        <ul>
+            <li ng-repeat="meme in memes">
+                {{meme.from}}<br><br>
+                <img ng-src="{{meme.body}}" height="500" width="500"> <br>
+            </li>
+        </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
     <script src="/javascripts/my_app.js"></script>
 </body>
       
