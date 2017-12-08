@@ -1,8 +1,9 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("https://static.pexels.com/photos/267399/pexels-photo-267399.jpeg");
 }
 
 a {
-  color: #00B7FF;
+  color: #ffff00;
 }

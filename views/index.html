@@ -3,25 +3,25 @@
     
 <head>
     <title>User Login and Sessions</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
 </head>
         
 <body>  
     <div ng-controller="myController">
-        <h2 id="welcomeText">Welcome. You are Logged In as
+        <h2 id="welcomeText" style="color:#ffff00;">Welcome. You are Logged In as
             <%= username %>
         </h2>
-        <a id="logoutLink" href="/logout">logout</a>
+        <a id="logoutLink" href="/logout">Logout</a>
         <a id="editLink" href="/user">Edit User</a>
-        <p>Place Your Code Here
-            <p>
+        <p style="color:white;">User Profile:<p>
     </div>
     <hr>
-    <span id="indexMsg">
+    <span id="indexMsg" style="color:white;">
         <%= msg %>
     </span>
     <hr>
-    <span id="colorText">
+    <span id="colorText" style="color:white;">
     Color
         <%= color %>
       </span>
