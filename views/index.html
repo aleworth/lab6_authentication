@@ -19,16 +19,14 @@
 </script>
     
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cantata+One" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
 </head>
         
 <body>  
     <div ng-controller="myController">
-        <h2 id="welcomeText" style="color:#ffff00;">Welcome to your Meme Library
-        </h2>
-        <a id="logoutLink" href="/logout">Logout</a> <br>
-        <a id="editLink" href="/user">Edit User</a><br>
-        <p style="color:white;">User Profile:<p>
+        <h2 class="display-3" id="welcomeText">Welcome to your meme library</h2>
+        <a class="lead" id="logoutLink" href="/logout">Logout</a><br>
     </div>
     <div ng-controller="memeController">
         <form>
@@ -37,12 +35,18 @@
             <input type="submit" ng-click="upload(meme)" value="Upload Meme">
         </form>
         <br>
-        <ul>
-            <li ng-repeat="meme in memes">
-                {{meme.from}}<br><br>
-                <img ng-src="{{meme.body}}" height="500" width="500"> <br>
-            </li>
-        </ul>
+    <div class="container">
+	<div class="card-columns">
+		<div class="card text-white bg-dark mb-3" style="max-width: 20rem;" ng-repeat="meme in memes">
+  		  <img class="card-img-top" ng-src="{{meme.body}}" alt="Card image cap" height="300" width="300">
+  		  <div class="card-body">
+    			<h4 class="card-title">{{meme.from}}</h4>
+       			<a href="#" class="btn btn-secondary">Remove</a>
+  		  </div>
+		</div>
+	<br>
+    	</div>
+    </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 <!-- AngularFire -->

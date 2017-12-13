@@ -1,9 +1,17 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url("https://static.pexels.com/photos/267399/pexels-photo-267399.jpeg");
+  font: 14px;
+  font-family: 'Cantata One', serif;
+  background-image: url("dankmemesback.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
 }
 
 a {
-  color: #ffff00;
+  font: 14px;
+  font-family: 'Cantata One', serif;
+  color: #468263;
 }
