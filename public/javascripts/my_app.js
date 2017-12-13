@@ -22,6 +22,7 @@ myApp.controller('memeController', ['$scope', "$firebaseArray", function($scope,
         };
         console.log(newMeme);
         $scope.memes.$add(newMeme);
+	meme.name = "";
         meme.picture = "";
     }
 }]);
